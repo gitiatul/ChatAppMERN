@@ -34,8 +34,9 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "public", "build", "index.html"))
   );
 }
-const server = app.listen(process.env.PORT, () =>
-  console.log(`Server started on ${process.env.PORT}`)
+const PORT=process.env.PORT || 5000
+const server = app.listen(PORT, () =>
+  console.log(`Server started on ${PORT}`)
 );
 const io = socket(server, {
   cors: {
