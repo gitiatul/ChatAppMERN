@@ -4,13 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd public && npm run build",
-    "install-public": "cd public && npm install",
-    "heroku-postbuild": "npm run install-public && npm run build",
-    "server": "node index.js",
-    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix public\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix public\""
-},
+    "start": "nodemon index.js",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix public && npm run build --prefix public"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
