@@ -1,4 +1,4 @@
-# whatsappclone
+# CHATAPPMERN
 
 https://chatclone-mern.herokuapp.com/
 
